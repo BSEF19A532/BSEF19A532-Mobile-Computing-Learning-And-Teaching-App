@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
         btn_exam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(MainActivity.this, Exam.class);
+                startActivity(intent);
             }
         });
     }

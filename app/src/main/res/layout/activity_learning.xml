@@ -43,8 +43,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
+        android:alpha="1"
+        android:background="#932B2B"
         android:text="@string/next"
         app:layout_constraintBottom_toBottomOf="@+id/btn_prev"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btn_prev" />
+        app:layout_constraintTop_toTopOf="@+id/btn_prev"
+        app:rippleColor="#3E0F0F" />
 </androidx.constraintlayout.widget.ConstraintLayout>
