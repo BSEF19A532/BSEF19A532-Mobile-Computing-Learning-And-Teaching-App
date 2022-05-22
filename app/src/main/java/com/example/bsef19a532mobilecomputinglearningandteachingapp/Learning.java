@@ -12,18 +12,6 @@ import android.widget.TextView;
 public class Learning extends AppCompatActivity {
 
     int current_index;
-    int[] images = {
-            R.drawable.tree,
-            R.drawable.fire,
-            R.drawable.water,
-            R.drawable.rock,
-    };
-    String[] contents = {
-            "This is a tree",
-            "This is fire",
-            "This is a water",
-            "This is a stone"
-    };
     ImageView img;
     TextView txt;
     Button btn_next;
@@ -46,14 +34,14 @@ public class Learning extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 current_index++;
-                img.setImageResource( images[current_index] );
-                txt.setText( contents[current_index] );
+                img.setImageResource( Data.images[current_index] );
+                txt.setText( "This is a " + Data.contents[current_index] );
 
                 if ( ! btn_prev.isShown() && current_index > 0 ) {
                     btn_prev.setVisibility(View.VISIBLE);
                 }
 
-                if ( current_index >= images.length - 1 ) {
+                if ( current_index >= Data.images.length - 1 ) {
                     btn_next.setVisibility(View.INVISIBLE);
                 }
             }
@@ -64,10 +52,10 @@ public class Learning extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 current_index--;
-                img.setImageResource( images[current_index] );
-                txt.setText( contents[current_index] );
+                img.setImageResource( Data.images[current_index] );
+                txt.setText( Data.contents[current_index] );
 
-                if ( ! btn_next.isShown() && current_index < images.length - 1 ) {
+                if ( ! btn_next.isShown() && current_index < Data.images.length - 1 ) {
                     btn_next.setVisibility(View.VISIBLE);
                 }
 
