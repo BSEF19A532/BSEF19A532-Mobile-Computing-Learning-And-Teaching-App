@@ -53,7 +53,7 @@ public class Learning extends AppCompatActivity {
             public void onClick(View view) {
                 current_index--;
                 img.setImageResource( Data.images[current_index] );
-                txt.setText( Data.contents[current_index] );
+                txt.setText( "This is " + Data.contents[current_index] );
 
                 if ( ! btn_next.isShown() && current_index < Data.images.length - 1 ) {
                     btn_next.setVisibility(View.VISIBLE);
