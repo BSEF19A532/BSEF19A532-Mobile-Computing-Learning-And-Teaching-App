@@ -35,7 +35,7 @@ public class Learning extends AppCompatActivity {
             public void onClick(View view) {
                 current_index++;
                 img.setImageResource( Data.images[current_index] );
-                txt.setText( "This is a " + Data.contents[current_index] );
+                txt.setText( "This is " + Data.contents[current_index] );
 
                 if ( ! btn_prev.isShown() && current_index > 0 ) {
                     btn_prev.setVisibility(View.VISIBLE);
