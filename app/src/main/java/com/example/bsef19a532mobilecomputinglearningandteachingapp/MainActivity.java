@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     Button btn_learn;
     Button btn_exam;
     Button btn_repo;
+    Button btn_list_view;
     String repo_url = "https://github.com/BSEF19A532/BSEF19A532-Mobile-Computing-Learning-And-Teaching-App";
 
     @Override
@@ -53,5 +54,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // list view button
+
     }
 }
