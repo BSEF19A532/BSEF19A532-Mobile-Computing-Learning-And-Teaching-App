@@ -56,6 +56,12 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // list view button
-
+        btn_list_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent( MainActivity.this, ListView.class );
+                startActivity(intent);
+            }
+        });
     }
 }
