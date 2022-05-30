@@ -5,11 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-
-import java.net.URI;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -59,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         btn_list_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent( MainActivity.this, ListView.class );
+                Intent intent = new Intent( MainActivity.this, ListViewActivity.class );
                 startActivity(intent);
             }
         });

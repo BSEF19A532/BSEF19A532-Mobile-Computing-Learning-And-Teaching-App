@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BSEF19A532MobileComputingLearningAndTeachingApp">
         <activity
-            android:name=".ListView"
+            android:name=".ListViewActivity"
             android:exported="true" />
         <activity
             android:name=".Exam"
