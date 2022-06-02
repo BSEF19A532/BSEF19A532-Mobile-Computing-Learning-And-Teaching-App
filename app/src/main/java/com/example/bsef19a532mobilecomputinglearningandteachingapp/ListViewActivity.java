@@ -19,6 +19,7 @@ public class ListViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view);
 
+        data = new ArrayList<String>();
         data.add("Khalil");
         data.add("Abdullah");
         data.add("Abdullah");

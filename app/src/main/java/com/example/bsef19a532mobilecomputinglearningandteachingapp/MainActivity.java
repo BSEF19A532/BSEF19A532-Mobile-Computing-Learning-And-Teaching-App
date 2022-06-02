@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         btn_learn = findViewById(R.id.btn_learn);
         btn_exam = findViewById(R.id.btn_exam);
         btn_repo = findViewById(R.id.btn_repo);
+        btn_list_view = findViewById(R.id.btn_adapter);
 
         // move to the learning activity
         btn_learn.setOnClickListener(new View.OnClickListener() {
