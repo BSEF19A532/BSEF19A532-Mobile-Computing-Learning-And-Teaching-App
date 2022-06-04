@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -13,6 +15,10 @@ public class ListViewActivity extends AppCompatActivity {
     ListView lst_view;
     ArrayAdapter<String> adapter;
     ArrayList<String> data;
+
+
+    Button btn;
+    EditText input;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,5 +35,8 @@ public class ListViewActivity extends AppCompatActivity {
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, data);
 
         lst_view.setAdapter(adapter);
+
+        btn = findViewById(R.id.button);
+        input = findViewById(R.id.input);
     }
 }

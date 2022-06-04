@@ -10,11 +10,13 @@
         android:id="@+id/input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="51dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="51dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/lst_view"
@@ -33,7 +35,9 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginBottom="4dp"
         android:text="Button"
-        tools:layout_editor_absoluteX="252dp"
-        tools:layout_editor_absoluteY="44dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/input"
+        app:layout_constraintStart_toEndOf="@+id/input" />
 </androidx.constraintlayout.widget.ConstraintLayout>
