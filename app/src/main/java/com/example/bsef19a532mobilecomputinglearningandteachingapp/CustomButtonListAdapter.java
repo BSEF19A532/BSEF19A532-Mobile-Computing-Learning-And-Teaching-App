@@ -9,14 +9,16 @@ import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 
+import java.util.ArrayList;
+
 public class CustomButtonListAdapter extends ArrayAdapter {
     Activity context;
-    String[] btn_list;
+    ArrayList<String> data;
     LayoutInflater inflater;
 
-    public CustomButtonListAdapter(Activity context, String[] btn_list) {
-        super(context, R.layout.layout_custom_list_view, btn_list);
-        this.btn_list = btn_list;
+    public CustomButtonListAdapter(Activity context, ArrayList<String> data) {
+        super(context, R.layout.layout_custom_list_view, data);
+        this.data = data;
         this.context = context;
     }
 
@@ -25,7 +27,10 @@ public class CustomButtonListAdapter extends ArrayAdapter {
         inflater = context.getLayoutInflater();
         View new_view = inflater.inflate(R.layout.layout_custom_list_view, null);
         Button btn = new_view.findViewById(R.id.btn_item);
-        btn.setText(btn_list[i]);
+        btn.setText(data.get(i));
+        btn.setFocusable(false);
+        btn.setClickable(false);
+        btn.setFocusableInTouchMode(false);
         return new_view;
     }
 }

@@ -64,9 +64,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
 //        Button[] btn = { new Button(getApplicationContext()) };
-        String[] data = { "test" };
-        ListView test = findViewById(R.id.test_view);
-        CustomButtonListAdapter adapter = new CustomButtonListAdapter(this, data);
-        test.setAdapter(adapter);
+//        String[] data = { "test" };
+//        ListView test = findViewById(R.id.test_view);
+//        CustomButtonListAdapter adapter = new CustomButtonListAdapter(this, data);
+//        test.setAdapter(adapter);
     }
 }

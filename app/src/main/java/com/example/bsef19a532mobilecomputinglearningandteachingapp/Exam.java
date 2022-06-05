@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -25,6 +27,7 @@ public class Exam extends AppCompatActivity implements View.OnClickListener {
     Button option_1;
     Button option_2;
     Button option_3;
+    ListView btns;
 
     Button btn_next;
 
@@ -49,6 +52,7 @@ public class Exam extends AppCompatActivity implements View.OnClickListener {
         option_1 = findViewById(R.id.option_1);
         option_2 = findViewById(R.id.option_2);
         option_3 = findViewById(R.id.option_3);
+        btns = findViewById(R.id.exam_btn_lst);
 
         imgView = findViewById(R.id.image);
         imgView.setImageResource(img);
@@ -66,6 +70,26 @@ public class Exam extends AppCompatActivity implements View.OnClickListener {
             random_items.add( items.get(index) );
             items.remove(index);
         }
+
+        CustomButtonListAdapter adapter = new CustomButtonListAdapter(this, random_items);
+        btns.setFocusable(true);
+        btns.setAdapter(adapter);
+
+        btns.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Log.d("item", "clicked");
+                Button btn = (Button) view.findViewById(R.id.btn_item);
+                String value = btn.getText().toString();
+                if ( value.equals( correct_option ) ) {
+                    btn.setText("correct");
+                    score++;
+                    score_text.setText("Score: " + score);
+                } else {
+                    btn.setText("wrong");
+                }
+            }
+        });
 
         option_1.setText(random_items.get(0));
         option_2.setText(random_items.get(1));
