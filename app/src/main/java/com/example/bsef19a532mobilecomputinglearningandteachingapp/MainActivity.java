@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -61,5 +62,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+//        Button[] btn = { new Button(getApplicationContext()) };
+        String[] data = { "test" };
+        ListView test = findViewById(R.id.test_view);
+        CustomButtonListAdapter adapter = new CustomButtonListAdapter(this, data);
+        test.setAdapter(adapter);
     }
 }
