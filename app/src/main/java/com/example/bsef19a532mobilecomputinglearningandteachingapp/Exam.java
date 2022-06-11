@@ -40,9 +40,11 @@ public class Exam extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exam);
 
+        // get the intent
         Intent intent = getIntent();
         img = intent.getIntExtra("image", 0);
         score = intent.getIntExtra("score", 0);
+        // get data from intent
         correct_option = intent.getStringExtra("correct_option");
         wrong_option_1 = intent.getStringExtra("wrong_option_1");
         wrong_option_2 = intent.getStringExtra("wrong_option_2");
