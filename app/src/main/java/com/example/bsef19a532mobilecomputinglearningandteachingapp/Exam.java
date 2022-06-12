@@ -62,6 +62,7 @@ public class Exam extends AppCompatActivity implements View.OnClickListener {
         imgView = findViewById(R.id.image);
         imgView.setImageResource(img);
 
+        // create array list of all options
         ArrayList<String> items = new ArrayList<String>();
         items.add( correct_option );
         items.add( wrong_option_1 );
