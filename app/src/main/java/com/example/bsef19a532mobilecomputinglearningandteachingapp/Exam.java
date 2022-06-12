@@ -49,13 +49,16 @@ public class Exam extends AppCompatActivity implements View.OnClickListener {
         wrong_option_1 = intent.getStringExtra("wrong_option_1");
         wrong_option_2 = intent.getStringExtra("wrong_option_2");
 
+        // select score text
         score_text = findViewById(R.id.score_text);
         score_text.setText("Score: " + score);
+        //  select options
         option_1 = findViewById(R.id.option_1);
         option_2 = findViewById(R.id.option_2);
         option_3 = findViewById(R.id.option_3);
         btns = findViewById(R.id.exam_btn_lst);
 
+        // select image view
         imgView = findViewById(R.id.image);
         imgView.setImageResource(img);
 
