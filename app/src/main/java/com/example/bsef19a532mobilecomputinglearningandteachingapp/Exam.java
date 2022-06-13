@@ -70,6 +70,7 @@ public class Exam extends AppCompatActivity implements View.OnClickListener {
 
         ArrayList<String> random_items = new ArrayList<String>();
 
+        // randomize the options
         while ( items.size() > 0 ) {
             Random rand = new Random();
             int index = rand.nextInt( items.size() );
@@ -77,6 +78,7 @@ public class Exam extends AppCompatActivity implements View.OnClickListener {
             items.remove(index);
         }
 
+        // adapt the randomized array list
         CustomButtonListAdapter adapter = new CustomButtonListAdapter(this, random_items);
         btns.setFocusable(true);
         btns.setAdapter(adapter);
