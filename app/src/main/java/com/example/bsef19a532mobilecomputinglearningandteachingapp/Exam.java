@@ -83,13 +83,17 @@ public class Exam extends AppCompatActivity implements View.OnClickListener {
         btns.setFocusable(true);
         btns.setAdapter(adapter);
 
+        // set on click event listener
         btns.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Log.d("item", "clicked");
+                // typecast to button
                 Button btn = (Button) view.findViewById(R.id.btn_item);
+                // get the value of the button
                 String value = btn.getText().toString();
+                // check if value equals the correct value
                 if ( value.equals( correct_option ) ) {
+                    // set the button text to correct
                     btn.setText("correct");
                     score++;
                     score_text.setText("Score: " + score);
