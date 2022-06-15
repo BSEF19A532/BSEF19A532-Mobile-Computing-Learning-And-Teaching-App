@@ -95,9 +95,12 @@ public class Exam extends AppCompatActivity implements View.OnClickListener {
                 if ( value.equals( correct_option ) ) {
                     // set the button text to correct
                     btn.setText("correct");
+                    // increment the score
                     score++;
+                    // show the updated score to the user
                     score_text.setText("Score: " + score);
                 } else {
+                    // inform the user that the option is wrong
                     btn.setText("wrong");
                 }
             }
