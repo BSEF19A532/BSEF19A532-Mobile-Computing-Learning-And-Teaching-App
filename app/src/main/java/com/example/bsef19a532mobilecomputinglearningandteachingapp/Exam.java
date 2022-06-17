@@ -106,16 +106,18 @@ public class Exam extends AppCompatActivity implements View.OnClickListener {
             }
         });
 
+        // set text to the options
         option_1.setText(random_items.get(0));
         option_2.setText(random_items.get(1));
         option_3.setText(random_items.get(2));
 
+        // set click event listeners to the options
         option_1.setOnClickListener(this);
         option_2.setOnClickListener(this);
         option_3.setOnClickListener(this);
-
+        // select the next button
         btn_next = findViewById(R.id.btn_next_question);
-
+        // if the current question is last then button text should signal back to home
         if ( Data.covered_indexes.size() == Data.images.length ) {
             btn_next.setText( "Back to Home" );
         }
